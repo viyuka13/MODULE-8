@@ -19,9 +19,24 @@ To write a Python program that takes a list of scores from participants and find
 ---
 
 ## 💻 PROGRAM:
-
-ADD CODE HERE
-
+    student_marks = {
+        "Alice": [85, 90, 78, 92, 88],
+        "Bob": [75, 80, 70, 85, 90],
+        "Charlie": [95, 85, 82, 87, 91],
+        "David": [65, 70, 60, 75, 68]
+    }
+    
+    total_marks = {}
+    
+    for student, marks in student_marks.items():
+        total_marks[student] = sum(marks)
+    
+    topper = max(total_marks, key=total_marks.get)
+    
+    print("Total Marks of Each Student:", total_marks)
+    print("Topper:", topper, "with a score of", total_marks[topper])
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/b1af693c-7190-4a7a-a6f2-3e2c0447c596)
 
 ## RESULT
+The program demonstrates dictionary operations and iteration to calculate total marks of each student and identify the student with the highest total (topper). It prints both the total marks and the topper's name along with their score accordingly.
